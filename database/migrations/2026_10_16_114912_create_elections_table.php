@@ -24,7 +24,7 @@ return new class extends Migration
             $table->dateTime('result_published_at')->nullable();
             $table->timestamps();
 
-            $table->index('status', 'start_at', 'end_at');
+            $table->index(['status', 'start_at', 'end_at']);
         });
     }
 
